@@ -7,4 +7,7 @@ package com.hspedu.file;
  * 注释：
  */
 public class FileCreate {
+    public static void main(String[] args) {
+
+    }
 }
