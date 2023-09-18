@@ -33,15 +33,19 @@ public class FileOutputStream01 {
             String str = "1234";
 
 //            fileOutputStream.write(str.getBytes());
-            fileOutputStream.write(str.getBytes(),0,3);
+            fileOutputStream.write(str.getBytes(), 0, 3);
             System.out.println("写入完毕~");
-//
+
+//FileOutputStream fileOutputStream1 = new FileOutputStream(filePath, true);   这个是不覆盖的写入
             FileOutputStream fileOutputStream1 = new FileOutputStream(filePath, true);
-            fileOutputStream.write(str.getBytes(),0,3);
+//            写入相应长度的字节
+            fileOutputStream.write(str.getBytes(), 0, 3);
             System.out.println("写入完毕~");
+            fileOutputStream.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {
+
         }
     }
 }
