@@ -15,25 +15,54 @@ import java.io.IOException;
  */
 public class FileReader_ {
 
+//一个字节一个字节的读取
+//    @Test
+//    public void test() {
+//        String filePath = "e:\\story.txt";
+//        FileReader fileReader = null;
+//        int buf = 0;
+//        try {
+//            fileReader = new FileReader(filePath);
+//            while ((buf = fileReader.read()) != -1) {
+//                System.out.print((char) buf);
+//            }
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        } finally {
+//            if (fileReader != null) {
+//                try {
+//                    fileReader.close();
+//                } catch (IOException e) {
+//                    throw new RuntimeException(e);
+//                }
+//            }
+//        }
+//    }
+
+    /*
+    使用字符数组读取
+     */
     @Test
     public void test() {
         String filePath = "e:\\story.txt";
         FileReader fileReader = null;
-        int buf = 0;
+        char[] chars = new char[1000];
+        int len = 0;
         try {
-            fileReader = new FileReader(filePath);
-            while ((buf = fileReader.read()) != -1) {
-                System.out.print((char) buf);
+            FileReader fileReader1 = new FileReader(filePath);
+            while ((len = fileReader1.read(chars)) != -1) {
+                System.out.println(new String(chars, 0, len));
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {
-            if (fileReader != null) {
-                try {
+            try {
+                if (fileReader != null) {
                     fileReader.close();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
                 }
+//                fileReader.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
         }
     }
