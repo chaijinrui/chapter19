@@ -6,10 +6,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 /**
- * @FileName： FileInputStream_
- * @Author：sns-chaijinrui
- * @date：2023-09-15
- * @Description：FileInputStream字节输入流 ，把文件导入到程序里去
+ * FileName： FileInputStream_
+ * Author：sns-chaijinrui
+ * date：2023-09-15
+ * Description：FileInputStream字节输入流 ，把文件导入到程序里去
  **/
 public class FileInputStream_ {
     public static void main(String[] args) {
