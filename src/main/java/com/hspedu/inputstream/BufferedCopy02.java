@@ -18,8 +18,8 @@ public class BufferedCopy02 {
         String srcFilePath = "e:\\srcKaola.png";
         String newFilePath = "e:\\newKala.png";
 //        创建对象
-        BufferedInputStream bufferedInputStream = null;
-        BufferedOutputStream bufferedOutputStream = null;
+            BufferedInputStream bufferedInputStream = null;
+            BufferedOutputStream bufferedOutputStream = null;
         try {
 //            FileInputStream 是 InputStream 的子类
             bufferedInputStream = new BufferedInputStream(new FileInputStream(srcFilePath));
